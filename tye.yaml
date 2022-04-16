@@ -1,0 +1,18 @@
+# tye application configuration file
+# read all about it at https://github.com/dotnet/tye
+#
+# when you've given us a try, we'd love to know what you think:
+#    https://aka.ms/AA7q20u
+#
+name: speedrun.api
+services:
+- name: identity-speedrun-api
+  project: Identity.SpeedRun.Api/Identity.SpeedRun.Api.csproj
+  bindings:
+  - port: 53353
+    protocol: https
+- name: speedrun-api
+  project: Speedrun.Api/Speedrun.Api.csproj
+  bindings:
+  - port: 53355
+    protocol: https
